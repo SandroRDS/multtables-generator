@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body
+        {
+            font-family: 'arial';
+            text-align: center;
+            background-image: linear-gradient(to top, rgb(90, 158, 175), rgb(81, 88, 192));
+            background-attachment: fixed;
+        }
+
+        p
+        {
+            display: inline;
+            color: rgb(13 68 118);
+            font-size: 20px;
+            border-bottom: 1px solid rgb(13 68 118);
+        }
+
+        #container_principal
+        {
+            border: 1px solid black;
+            width: 40%;
+            padding: 2% 0 0 0;
+            height: 70vh;
+            margin-left: auto;
+            margin-right: auto;
+            overflow-y: auto;
+            border-radius: 20px 0 0 20px;
+            background-color: #9ed4df;
+        }
+        
+        #container_principal::-webkit-scrollbar
+        {
+            background-color: rgb(159, 195, 226);
+            width: 3px;
+        }
+
+        #container_principal::-webkit-scrollbar-thumb
+        {
+            background-color: rgb(41, 83, 119);
+            border-radius: 30px;
+        }
+
+        #titulo
+        {
+            display: inline;
+            font-size: 28px;
+            color: rgb(38, 33, 104);
+        }
+
+        h2
+        {
+            display: inline;
+            font-size: 22px;
+            color: rgb(38, 33, 104);
+        }
+
+        input[type=number]::-webkit-inner-spin-button 
+        { 
+            -webkit-appearance   :  none;
+        }
+
+        #tabuada
+        {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: 2px solid rgb(46, 61, 129);
+            background-color: rgb(72, 99, 219);
+            color: rgb(38, 33, 104);
+            position: relative;
+            bottom: 2px;
+            left: 5px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            -moz-appearance   :  textfield;
+            appearance        :  textfield;
+        }
+        
+        #tamanho
+        {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: 2px solid rgb(46, 61, 129);
+            background-color: rgb(72, 99, 219);
+            color: rgb(38, 33, 104);
+            position: relative;
+            bottom: 2px;
+            left: 5px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            -moz-appearance   :  textfield;
+            appearance        :  textfield;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top: 30px">
+        <h1 id="titulo">Tabuada de</h1>
+        <input type="number" id="tabuada" onchange="calcularTabuada()" min="0">
+    </div>
+
+    <div style="margin-top: 30px">
+        <h2>Tamanho da Tabuada (Limite):</h2>
+        <input type="number" id="tamanho" onchange="calcularTabuada()" min="0">
+    </div>
+
+    <div id='container_principal'></div>
+
+    <script>
+        var tabuada, tamanho, i;
+
+        function calcularTabuada()
+        {
+            var resultado = "";
+            tabuada = document.getElementById("tabuada").value;
+            tamanho = document.getElementById("tamanho").value;
+
+            if(tabuada<0)
+            {
+                document.getElementById("tabuada").value = 0;
+            }
+
+            if(tamanho<0)
+            {
+                document.getElementById("tamanho").value = 0;
+            }
+            
+            if(tabuada != "" && tamanho != "")
+            {
+                for(i=0;i<=tamanho;i++)
+                {
+                    resultado += `<div style='margin-bottom: 20px'><p> ${tabuada} x ${i} = ${tabuada*i} </p></div>`;
+                }
+                
+                document.getElementById("container_principal").innerHTML = resultado;
+            }
+        }
+    </script>
+</body>
+</html>
