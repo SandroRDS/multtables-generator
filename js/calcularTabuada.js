@@ -4,11 +4,6 @@ function calcularTabuada()
     tabuada = document.getElementById("tabuada").value;
     tamanho = document.getElementById("tamanho").value;
 
-    if(tabuada<0)
-    {
-        document.getElementById("tabuada").value = 0;
-    }
-
     if(tamanho<0)
     {
         document.getElementById("tamanho").value = 0;
