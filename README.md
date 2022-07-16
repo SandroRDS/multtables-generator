@@ -13,7 +13,9 @@
 > &#x1F517; Link do Projeto:  
 &#x27A1; https://sandrords.github.io/gerador-de-tabuada/
 
-> Tipo de Projeto: Pessoal &#x1F4DA;
+> Tipo de Projeto: *Pessoal* &#x1F4DA;
+
+> Status do Projeto: *Versão 1 Completa* &#10004;&#x1F6A7;
 
 ## Descrição ##
 
