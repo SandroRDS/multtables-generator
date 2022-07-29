@@ -8,8 +8,6 @@
 </p>
 </h1>
 
-<u> [#APRENDI NA ALURA](https://www.alura.com) </u>
-
 > &#x1F517; Link do Projeto:  
 &#x27A1; https://sandrords.github.io/gerador-de-tabuada/
 
@@ -31,3 +29,6 @@ O projeto consiste em um gerador de tabuada simples, onde o usuário pode inform
 ## Ferramentas Utilizadas ##
 
 Foi utilizado as linguagens ***HTML*** e ***CSS*** para a construção e estilização da página e, para receber os valores informados pelos usuários e gerar as tabuadas, foi utilizado a linguagem de programação ***JavaScript***.
+
+---
+Made by &#128153; [SandroRDS](https://www.linkedin.com/in/sandro-rosa-de-souza-02a5bb241/) &#128153; | &#x1F47E; Mais Projetos: https://github.com/SandroRDS?tab=repositories 
