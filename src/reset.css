@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: 'Martel Sans';
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/background.jpg');
+}
