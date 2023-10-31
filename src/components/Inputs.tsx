@@ -15,6 +15,10 @@ const InputsSection = styled.section`
     color: whitesmoke;
     background-color: #242424b7;
     border: 2px solid #2b2b2b;
+
+    @media screen and (min-width: 1024px) {
+        width: 300px;
+    }
 `;
 
 const Multiplier = styled.input`
@@ -34,6 +38,10 @@ const Multiplier = styled.input`
     &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
         -webkit-appearance: none; 
         margin: 0;
+    }
+
+    &::placeholder {
+        color: #f5f5f5be;
     }
 `;
 

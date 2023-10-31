@@ -31,12 +31,40 @@ const ResultContainer = styled.section`
     span {
         font-weight: 600;
     }
+
+    span:first-child {
+        color: #1b7dbe;
+    }
+
+    span:last-child {
+        color: #144572;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: #0000;
+        height: 8px;
+        
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #2b2b2bcc;
+        border-radius: 6px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 900px;
+    }
 `;
 
 function Main() {
     const [multiplier, setMultiplier] = useState<number | undefined>();
     const [finalNumber, setFinalNumber] = useState<number | undefined>();
     const multTableList = useMultTable(multiplier, finalNumber);
+
+    const getRandomColor = () => {
+        const getRandomNumber = () => Math.floor(Math.random() * 51) + 100;
+        return `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
+    };
 
     return (
         <main>
@@ -47,7 +75,7 @@ function Main() {
                         <p>
                             <span>{String(multiplierValue)}</span>
                             <span>x</span>
-                            <span>{String(multiplicandValue)}</span>
+                            <span style={ { color: getRandomColor() } }>{String(multiplicandValue)}</span>
                             <span>=</span>
                             <span>{String(productValue)}</span>
                         </p>
