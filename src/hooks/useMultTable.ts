@@ -10,7 +10,6 @@ function useMultTable(multiplier: number = 0, finalNumber: number = 0) {
         if (list.length) setMultTableList([...list]);
     }, [multiplier, finalNumber]);
 
-
     return multTableList;
 }
 

@@ -43,7 +43,6 @@ const ResultContainer = styled.section`
     &::-webkit-scrollbar {
         background-color: #0000;
         height: 8px;
-        
     }
 
     &::-webkit-scrollbar-thumb {
@@ -69,15 +68,15 @@ function Main() {
     return (
         <main>
             <Inputs { ...{ multiplier, finalNumber, setMultiplier, setFinalNumber }} />
-            <ResultContainer>
+            <ResultContainer data-testid='result-container'>
                 {multTableList.map(([multiplierValue, multiplicandValue, productValue]: Number[]) => {
                     return (
                         <p>
-                            <span>{String(multiplierValue)}</span>
+                            <span data-testid='result-multiplier'>{String(multiplierValue)}</span>
                             <span>x</span>
-                            <span style={ { color: getRandomColor() } }>{String(multiplicandValue)}</span>
+                            <span data-testid='result-multiplicand' style={ { color: getRandomColor() } }>{String(multiplicandValue)}</span>
                             <span>=</span>
-                            <span>{String(productValue)}</span>
+                            <span data-testid='result-product'>{String(productValue)}</span>
                         </p>
                     );
                 })}

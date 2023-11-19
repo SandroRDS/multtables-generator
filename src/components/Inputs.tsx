@@ -73,13 +73,13 @@ function Inputs({ finalNumber, multiplier, setFinalNumber, setMultiplier }: Inpu
 
     return (
         <InputsSection>
-            <Multiplier type='number' placeholder='?' value={multiplier} onChange={(e) => changeHandler(e, setMultiplier)} />
+            <Multiplier data-testid='multiplier' type='number' placeholder='?' value={multiplier} onChange={(e) => changeHandler(e, setMultiplier)} />
             <span>x</span>
             <span>1</span>
             <Ellipsis>.<br />.<br />.</Ellipsis>
             <span>{multiplier}</span>
             <span>x</span>
-            <FinalNumber type='number' placeholder='N' value={finalNumber} onChange={(e) => changeHandler(e, setFinalNumber)} />
+            <FinalNumber data-testid='final-number' type='number' placeholder='N' value={finalNumber} onChange={(e) => changeHandler(e, setFinalNumber)} />
         </InputsSection>
     );
 }
